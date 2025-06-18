@@ -1,0 +1,278 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #111;
+  color: white;
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover {
+  background-color: #f0f0f0;
+}
+
+nav h1 {
+  margin-right: auto;
+  margin-left: 20px;
+  color: black;
+}
+
+/* Sidebar for mobile */
+.side-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  display: none;
+  flex-direction: column;
+  padding-top: 20px;
+  z-index: 2000;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.side-bar li {
+  width: 100%;
+}
+
+.side-bar a {
+  width: 100%;
+}
+
+/* Hamburger menu */
+.menu {
+  display: none;
+  padding: 0 20px;
+}
+
+@media (max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .side-bar {
+    width: 100%;
+  }
+}
+
+/* ========== HERO SECTION ========== */
+.home {
+  background-image: url(./mo-ahmedx-portfolio/assets/pictures/body_bg.jpg);
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 60px 40px;
+  min-height: 100vh;
+  gap: 40px;
+
+}
+
+.hero img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 200px;
+  object-fit: cover;
+  background-color: darkgray;
+  filter: drop-shadow(0 0 12px rgba(255, 0, 0, 0.6));
+}
+
+.main-title {
+  max-width: 600px;
+}
+
+.main-title h2 {
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.mo {
+  color: #ff4d4d;
+  font-weight: bold;
+}
+
+.main-title p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 24px;
+  background: white;
+  color: #ff4d4d;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e03e3e;
+  color: white;
+}
+
+.btn.hire {
+  background-color: transparent;
+  border: 2px solid #ff4d4d;
+}
+
+.btn.hire:hover {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .main-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .main-title p {
+    font-size: 1rem;
+  }
+
+  .hero img {
+    max-width: 250px;
+    height: 250px;
+  }
+}
+
+/* ========== PROJECT SECTION ========== */
+section {
+  padding: 80px 20px;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  scroll-margin-top: 80px;
+}
+
+.projects {
+  background-image: url('./mo-ahmedx-portfolio/assets/pictures/projects-bg1.jpeg');
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 400px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 0 10px rgba(255, 100, 100, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  color: #1f7bcc;
+  font-weight: bold;
+}
+
+.project-card a:hover {
+  background-color: #1f7bcc;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.web-img {
+  max-height: 200px;
+  width: 100%;
+}
